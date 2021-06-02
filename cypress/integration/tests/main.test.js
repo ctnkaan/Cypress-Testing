@@ -10,13 +10,13 @@ describe("Tests", () => {
     })
 
     it("Correct Page Title", () => {
-        cy.contains("Play Chess")
-        cy.contains("for Free")
-        cy.contains("on the #1 Site!")
+        cy.contains("Play Chess");
+        cy.contains("for Free");
+        cy.contains("on the #1 Site!");
     })
 
     it("Correct Body Exists", () => {
-        cy.get("div[class=base-layout]").should("exist")
+        cy.get("div[class=base-layout]").should("exist");
     })
 
     it("Iphone / Ipad View", () => {
@@ -24,21 +24,21 @@ describe("Tests", () => {
         for (let i = 3; i < 9; i++) { //Check iphone 3 to iphone 8
             cy.viewport("iphone-"+i);
             cy.visit("https://www.chess.com");
-            cy.get("div[class=base-layout]").should("exist")
+            cy.get("div[class=base-layout]").should("exist");
         }
 
         cy.viewport("ipad-2");
         cy.visit("https://www.chess.com");
-        cy.get("div[class=base-layout]").should("exist")
+        cy.get("div[class=base-layout]").should("exist");
     })
 
     it("Android View", () => {
         cy.viewport("samsung-note9");
         cy.visit("https://www.chess.com");
-        cy.get("div[class=base-layout]").should("exist")
+        cy.get("div[class=base-layout]").should("exist");
         cy.viewport("samsung-s10");
         cy.visit("https://www.chess.com");
-        cy.get("div[class=base-layout]").should("exist")
+        cy.get("div[class=base-layout]").should("exist");
     }) 
 
     it("Playtest vs CPU", () => {
@@ -49,8 +49,12 @@ describe("Tests", () => {
         
         cy.contains("Choose").click();
 
-        cy.get("div[class=selection-menu-footer]").click()
+        cy.get("div[class=selection-menu-footer]").click();
 
+        cy.get(".piece.wp.square-12").click();
+        cy.get(".piece.wp.square-22").click();
+        cy.get(".piece.wp.square-32").click();
+        cy.get(".piece.wp.square-42").click();
         cy.get(".piece.wp.square-52").click();
         cy.get(".piece.wp.square-62").click();
         cy.get(".piece.wp.square-72").click();
