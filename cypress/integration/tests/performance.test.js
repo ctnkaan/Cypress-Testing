@@ -1,3 +1,7 @@
+/// <reference types="cypress" />
+
+
+
 describe('Performance test using chrome lighthouse integrated in cypress', () => {
     
   it("measures page load on the home page", () => {

@@ -3,7 +3,7 @@ require('dotenv').config()
 let password = Cypress.env("PASSWORD");
 
 
-describe("Tests", () => {
+describe("Tests of the main functions of the site", () => {
     
     it("Site Loads Correctly", () => {
         cy.visit("https://www.chess.com");
