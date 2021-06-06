@@ -2,7 +2,7 @@
 
 
 
-describe('Performance test using chrome lighthouse integrated in cypress', () => {
+describe('Performance test', () => {
     
   it("measures page load on the home page", () => {
     cy.visit("https://www.chess.com/", {
